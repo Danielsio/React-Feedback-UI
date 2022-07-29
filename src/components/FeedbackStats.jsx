@@ -3,11 +3,9 @@ import FeedbackContext from "../context/FeedbackContext";
 
 function FeedbackStats() {
   const { feedback } = useContext(FeedbackContext);
-  const avg = Math.round(
-    feedback.reduce((acc, { rating }) => acc + rating, 0) / feedback.length
-  )
-    .toFixed(1)
-    .replace(/[.,]0$/, " ");
+  const avg =
+    feedback.reduce((acc, { rating }) => acc + rating, 0) /
+    feedback.length.toFixed(1).replace(/[.,]0$/, " ");
 
   return (
     <div className="feedback-stats">
