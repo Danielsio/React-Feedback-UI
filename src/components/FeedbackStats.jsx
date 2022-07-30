@@ -10,7 +10,7 @@ function FeedbackStats() {
     feedback.reduce((acc, { rating }) => acc + rating, 0) / feedback.length
   );
 
-  // average = average.toFixed(1).replace(/[.,]0$/, '')
+  // average = average.toFixed(1).replace(/[.,]0$/, "");
   // average = Math.round(average)
 
   return (
