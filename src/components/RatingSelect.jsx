@@ -6,18 +6,18 @@ function RatingSelect({ select, selected }) {
   // }, [feedbackEdit])
 
   const handleChange = (e) => {
-    select(+e.currentTarget.value)
-  }
+    select(+e.currentTarget.value);
+  };
 
   // NOTE: simplified with iteration
   return (
-    <ul className='rating'>
+    <ul className="rating">
       {Array.from({ length: 10 }, (_, i) => (
         <li key={`rating-${i + 1}`}>
           <input
-            type='radio'
+            type="radio"
             id={`num${i + 1}`}
-            name='rating'
+            name="rating"
             value={i + 1}
             onChange={handleChange}
             checked={selected === i + 1}
@@ -26,7 +26,7 @@ function RatingSelect({ select, selected }) {
         </li>
       ))}
     </ul>
-  )
+  );
 }
 
-export default RatingSelect
+export default RatingSelect;
