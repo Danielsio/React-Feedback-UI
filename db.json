@@ -24,6 +24,11 @@
       "rating": 2,
       "text": "this is a new feedback from postMan",
       "id": 5
+    },
+    {
+      "rating": "9",
+      "text": "this is a new feedback from postMan",
+      "id": 6
     }
   ]
 }

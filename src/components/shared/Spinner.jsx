@@ -1,13 +1,13 @@
-import spinner from "../assets/spinner.gif";
+import spinner from '../assets/spinner.gif'
 
 function Spinner() {
   return (
     <img
       src={spinner}
-      alt="Loading..."
-      style={{ width: "100px", margin: "auto", diplay: "block" }}
+      alt='Loading...'
+      style={{ width: '100px', margin: 'auto', display: 'block' }}
     />
-  );
+  )
 }
 
-export default Spinner;
+export default Spinner

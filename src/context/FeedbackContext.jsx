@@ -27,15 +27,20 @@ export const FeedbackProvider = ({ children }) => {
 
   // add feedback
   const addFeedback = async (newFeedback) => {
-    const response = await fetch("http://localhost:5000/feedback", {
+    fetch("http://localhost:5000/feedback", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(newFeedback),
-    });
-
-    const data = await response.json();
-    setFeedback([data, ...feedback]);
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        //feedback set to an array with all the current feedback and adding the newFeedback onto it.
+        setFeedback([data, ...feedback]);
+      });
   };
+
   // delete feedback
   const deleteFeedback = (id) => {
     if (window.confirm("Are you sure you want to delete?")) {
